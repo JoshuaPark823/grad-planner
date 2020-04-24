@@ -1,0 +1,70 @@
+html {
+    font-family: 'Open sans', sans-serif;
+}
+
+.text, .prompt, .num-text {
+    color: white;
+}
+
+#scroll-button {
+    margin-top: 150px;
+    text-align: center;
+}
+
+#about-wrapper {
+    background-image: url("mcgill-bg4.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+#about-text {
+    text-align: left;
+    margin-top: 208px;
+    margin-bottom: 100px;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+#about-title {
+    font-size: 36px;
+}
+
+#about-body {
+    font-size: 18px;
+    background-color: rgba(100,100,100, 0.65);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#main-content {
+    display:none;
+}
+
+button {
+    border-radius: 5px;
+}
+
+#index-title {
+    margin-top: 15%;
+    font-size: 36px;
+}
+
+#required-credits-prompt {
+    margin-top: 10px;
+}
+
+#submit-button-wrapper {
+    margin-top: 10px;
+}
+
+#title-wrapper, #base-info-container {
+    text-align: center;
+}
+
+
+
+
