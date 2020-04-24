@@ -1,6 +1,20 @@
+/*
+
+    CSS for Main Functionality and Body
+
+
+    Attemped BG Colours: 
+
+    maroon-ish colour: 119, 46, 37
+    dark jg green: 26, 40, 31 (pretty good w the bg)  
+    "pine tree": 13, 25, 1
+    powder blue: 190, 233, 232
+    burnt umber: 130, 51, 41
+    cool navy ish: 1b262c (very solid)
+*/
 
 #main-content-container {
-    background-color: rgb(130, 51, 41) !important;
+    background-color: rgba(26, 40, 31, 1) !important;
     background-attachment: fixed;
     margin-top: 0;
     margin-left: 0;
@@ -13,12 +27,13 @@
     opacity: 0;
 }
 
-#current-earned, #creds-remaining {
+#current-earned, 
+#creds-remaining {
     font-size: 18px;
 }
 
-#add-course-prompt {
-    margin-top: 10%;
+#add-course-wrapper {
+    margin-top: 0px;
     text-align: center;
     font-size: 18px;
 }
@@ -29,7 +44,6 @@
 
 #top-navbar {
     text-align: left;
-    background-color: rgb(119, 46, 37);
     height: 50px;
     padding-left: 20px;
 }
@@ -47,12 +61,39 @@
 }
 
 #display-credits {
-    margin-top: 2.5%;
+    margin-top: 100px;
     text-align: center;
 }
 
 #remaining-text {
     margin-left: 100px;
+}
+
+.ins, .ins-text {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.ins {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+}
+
+.ins-text {
+    width: 280px;
+    text-align: center;
+    display: inline-block;
 }
 
 .course {

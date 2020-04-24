@@ -4,32 +4,38 @@
         <script src = "script.js"></script>
         <link rel = "stylesheet" href = "style.css">
         <link rel = "stylesheet" href = "main-style.css">
+        <link rel = "stylesheet" href = "component.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
     </header>
 
     <title id = "title">index-gradPlanner.io</title>
 
+    <!-- Index Div and Initial Information: Foundation -->
+    
     <div id = "content-container">
-        <div id = "title-wrapper">
-            <p class = "text" id = "index-title">
-                <strong>gradPlanner.io</strong>
-            </p>
-        </div>
-        <div id = "base-info-container">
-            <div class = "prompt" id = "earned-credits-prompt">
-                How many earned credits do you currently have? <input type = "number" step = "1" id = "earned-credits">
+        <div id = "multi-wrapper">
+            <div id = "title-wrapper">
+                <p class = "text" id = "index-title"><strong>gradPlanner.io</strong></p>
             </div>
-            <div class = "prompt" id = "required-credits-prompt">
-                How many credits does your degree require? <input type = "number"  step = "1" id = "required-credits" onkeypress = "if (window.event.keyCode == 13) submit()">
-            </div>
-            <div class = "button-wrapper" id = "submit-button-wrapper">
-                <button type = "button" id = "submit-button" onclick="submit()">Get Started</button>
-            </div>
-        </div>
 
-        <div class = "button-wrapper" id = "scroll-button">
-            <button type = "button" onclick = "smoothScroll(document.getElementById('about-wrapper'))">Learn More</button>
+            <div id = "base-info-container">
+                <div class = "prompt" id = "earned-credits-prompt">
+                    How many earned credits do you currently have? <input type = "number" step = "1" id = "earned-credits">
+                </div>
+
+                <div class = "prompt" id = "required-credits-prompt">
+                    How many credits does your degree require? <input type = "number"  step = "1" id = "required-credits" onkeypress = "if (window.event.keyCode == 13) submit()">
+                </div>
+
+                <div class = "button-wrapper" id = "submit-button-wrapper">
+                    <button class = "btn btn-1 btn-1d" type = "button" id = "submit-button" onclick="submit()">Get Started</button>
+                </div>
+            </div>
+    
+            <div class = "button-wrapper" id = "scroll-button">
+                <button class = "btn btn-1 btn-1f" type = "button" onclick = "smoothScroll(document.getElementById('about-wrapper'))">Learn More</button>
+            </div>
         </div>
 
         <div id = "about-wrapper">
@@ -55,48 +61,61 @@
         </div>
     </div>
 
-    <!--
-        maroon-ish colour: 119, 46, 37
-        dark jg green: 26, 40, 31 (pretty good w the bg)  
-        "pine tree": 13, 25, 1
-        powder blue: 190, 233, 232
-        burnt umber: 130, 51, 41
-    -->
+    <!-- Main Body and Functionality: Plan Builder -->
 
     <body id = "main-content-container">
         <div id = "main-content">
 
             <div id = "top-navbar">
                 <img src = "mcgill logo.png" id = "mcgill-logo">
-                <span id = "top-left-logo">
+                <span class = "text" id = "top-left-logo">
                     gradPlanner.io
                 </span>
                 <span class = "button-wrapper" id = "add-sem-prompt">
-                    <button type = "button" onclick = "addSemester()">Add Semester</button>
+                    <button class = "btn btn-1 btn-1e" type = "button" onclick = "addSemester()">Add Semester</button>
                 </span>
     
                 <!-- TO DO: Finish implementation of clearMatrix() in script.js -->
                 <span class = "button-wrapper" id = "clear-matrix-prompt">
-                    <button type = "button" onclick = "clearMatrix()">Clear School Year</button>
+                    <button class = "btn btn-1 btn-1e" type = "button" onclick = "clearMatrix()">Clear Courses</button>
                 </span>
             </div>
 
             <div id = "display-credits">
-
-                <span class = "text" id = "earned-text"> Current Earned Credits:</span>
+                <span class = "text" id = "earned-text"> Total Earned Credits: &nbsp;</span>
                 <span class = "num-text" id = "current-earned"> earned </span>
-                <span class = "text" id = "remaining-text">Credits Remaining:</span>
+                <span class = "text" id = "remaining-text">Credits Remaining: &nbsp;</span>
                 <span class = "num-text" id = "creds-remaining"> remaining </span>
             </div>
 
-            <div class = "prompt" id = "add-course-prompt">
-                <p class = "prompt">
-                    <strong>
-                        Add Course
-                    </strong>
-                </p> 
-            <input type = "text" id = "course-input" onkeypress = "if (window.event.keyCode == 13) {addCourse();clearDisplayMatrix();displayMatrix();}">
-                <button type = "button" onclick = "addCourse();clearDisplayMatrix();displayMatrix()"> Enter </button>
+            <div id = "ins-container">
+                <span class = "ins-wrapper" id = "ins1">
+                    <span class = "ins"> 1 </span>
+                    <span class = "ins-text">
+                        Search for a course you're planning on taking! Courses are added to the current semester.
+                    </span>
+                </span>
+                
+                <span class = "ins-wrapper" id = "ins2">
+                    <span class = "ins"> 2 </span>
+                    <span class = "ins-text">
+                        If you're done with the current semester, click "Add Semester"! If the button clicks, you've successfully
+                        added another semester.
+                    </span>
+                </span>
+
+                <span class = "ins-wrapper" id = "ins3">
+                    <span class = "ins"> 3 </span>
+                    <span class = "ins-text">
+                        Continue! Graduate and leave this degenerate ass school!
+                    </span>
+                </span>
+            </div>
+
+            <div class = "prompt-wrapper" id = "add-course-wrapper">
+                <p class = "prompt"><strong>Add Course</strong></p> 
+                <input type = "text" id = "course-input" onkeypress = "if (window.event.keyCode == 13) document.getElementById('enter-button').click()">
+                <button class = "btn btn-1 btn-1f" id = "enter-button" type = "button" onclick = "addCourse();clearDisplayMatrix();displayMatrix()"> Enter </button>
             </div>
 
             <div id = "semester-matrix">
