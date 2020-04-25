@@ -89,8 +89,6 @@ function addSemester() {
     numSemesters++;
 }
 
-// TO DO: displays the matrix by creating the boxes, probs gonna be the hardest
-// method to finish.
 function displayMatrix() {
 
     //Always clear the matrix before displayMatrix() is called so there aren't any
@@ -133,27 +131,22 @@ function clearDisplayMatrix() {
 }
 
 //function that clears the matrix
-//TO DO: finish implementation
 function clearMatrix() {
 
-    console.log("the matrix before clearing: " + matrix);
-
-    //TO DO: do some math with the matrix and set the earnedCredits back to its original
-    // value. This should also change the remainingCredits val automatically.
+    var credPerCourse = 3; // hard coding credits per course as 3 right now
     var count = 0;
+
     for(var i = 0; i < matrix.length; i++) {
         for(var j = 0; j < matrix[i].length; j++) {
             count++;
         }
     }
-    updateEarned(earnedCredits - count);
 
-
+    updateEarned(earnedCredits - count * credPerCourse);
     matrix = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
     numSemesters = 1;
     clearDisplayMatrix();
     displayCredits();
-    console.log("after clearing " + matrix);
 }
 
 // fade out function: fades out the input element
