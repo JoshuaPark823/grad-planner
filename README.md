@@ -1,28 +1,24 @@
-# gradPlanner
+# Grad Planner Web Project
 
-## gradPlanner.io Website Source Code
+### Overview
+- Build a web application using vanilla JavaScript and HTML/CSS that builds a structure for a student's graduation at McGill. Currently credits are weighted equally (1/2/4 Credit courses aren't available). 
+- Create a responsive frontend UI with out using any frameworks, libraries, or advanced JavaScript technologies.
 
-- This is the source code for my first web project, gradPlanner.io.
+### Languages & Technologies
+- HTML5 / CSS3
+- JavaScript ES6
+- jQuery API (Tentative)
+- Bootstrap CSS3 Framework (Tentative)
 
-## What is gradPlanner.io?
+### Possible Future Additions
+- Refactor the JavaScript codebase using jQuery, selectors, etc.
+- Strip frontend and apply the Bootrstrap CSS3 framework.
 
-- gradPlanner.io is a website built from simplistic HTML, CSS, and JavaScript with the goal of helping McGill students better plan
-their degrees.
+### Hurdles & Solutions
 
-## Notable Points:
+- Considering this was my first web project, I dove immediately into throwing a bunch of HTML together, styling it with CSS, and adding tons of JavaScript functionality between the HTML/JS DOM.
+- However, the lack of planning and surplus of excitement lead to a lot of code refactoring as the project went on and got larger. </br> </br>
 
-- A portion of the Student Data (semesters and courses enrolled) are stored in a two-dimensional matrix with the outer elements 
-representing semesters and the inner elements representing the courses. This allowed for both fast and accessible storage of student data. 
-
-## Difficulties:
-
-- Considering this was my first web project, I dove immediately into throwing a bunch of HTML together, styling it with CSS, and
-adding tons of JavaScript functionality between the HTML/JS DOM.
-- However, the lack of planning and surplus of excitement lead to a lot of code refactoring as the project went on and got larger.
-
-## Solutions:
-
-- I took a step back, went a little old school, and wrote each JS method and the stack trace of function calls on a piece of paper.
-By planning out the structure of my functions and HTML elements, I was able to much better understand and grasp the relationship between
-HTML and JavaScript.
+- Solutions:
+  - I took a step back, went a little old school, and wrote each JS method and the stack trace of function calls on a piece of paper. By planning out the structure of my functions and HTML elements, I was able to much better understand and grasp the relationship between HTML and JavaScript.
 
