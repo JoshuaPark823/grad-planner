@@ -1,3 +1,11 @@
+/*
+    TO DO:
+        - Refactor code applying jQuery API
+        - Finish adding all of the button functionalities
+        - Refactor with improved readability like arrow functions, function inputs, etc
+        - Clear whitespace and make comments consistent
+        - Add a "Dark Mode" option
+*/
 
 // global variables of the working student
 var earnedCredits = 0;
