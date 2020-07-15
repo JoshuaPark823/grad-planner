@@ -5,14 +5,12 @@
 - Create a responsive frontend UI with out using any frameworks, libraries, or advanced JavaScript technologies.
 
 ### Languages & Technologies
-- HTML5 / CSS3
+- HTML/CSS
 - JavaScript ES6
-- jQuery API (Tentative)
-- Bootstrap CSS3 Framework (Tentative)
 
 ### Possible Future Additions
 - Refactor the JavaScript codebase using jQuery, selectors, etc.
-- Strip frontend and apply the Bootrstrap CSS3 framework.
+- Implement **Responsive Design** either using CSS3 media queries or webkit. 
 
 ### Hurdles & Solutions
 
